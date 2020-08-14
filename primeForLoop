@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Enter number to be tested : " num
+
+for (( i=2; i<num ; i++ ))
+ {
+    if [[ $num%$i -eq 0 ]]
+         then
+                count=$(( $count+1 ))
+         else
+                count=$count
+    fi
+}
+
+ if [[ count -eq 0 ]]
+    then
+          echo "$num is a prime number"
+    else
+          echo "$num is not a prime number"
+fi

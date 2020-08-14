@@ -1,0 +1,26 @@
+#!/bin/bash
+
+read -p "Enter numbers to be tested from : " start
+read -p "Enter numbers to be tested to : " end
+for (( i=start; i<=end ; i++ ))
+ {
+
+      for (( j=2; j<i ; j++ ))
+{
+
+    if [[ $i%$j -eq 0 ]]
+         then
+              count=$(( $count+1 ))
+         else
+              count=$count      
+    fi
+
+}
+    if [[ count -eq 0 ]]
+         then
+              echo $i 
+    fi
+
+        count=0; 
+}
+          
